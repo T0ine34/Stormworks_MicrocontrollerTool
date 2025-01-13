@@ -1,7 +1,4 @@
 import os
-from sre_constants import IN
-from PIL import Image, ImageDraw
-from memory import Memory
 from enum import StrEnum
 
 import xml.etree.ElementTree as ET
@@ -34,22 +31,22 @@ OUT_CIRCLE_RADIUS = 255
 IN_CIRCLE_RADIUS = 127
 
 
-@Memory
+
 def create_input_node(type : TYPES):
     color = COLORS.get(type)
-    img = ET.Element('svg', xmlns='http://www.w3.org/2000/svg', version='1.1', width='512', height='512')
-    circle = ET.SubElement(img, 'circle', cx='256', cy='256', r='255', fill=f'rgb{color}', stroke='black', stroke_width='5')
-    circle = ET.SubElement(img, 'circle', cx='256', cy='256', r='127', fill='white', stroke='black', stroke_width='5')
+    img = ET.Element('g')
+    circle = ET.SubElement(img, 'circle', cx='256', cy='256', r='255', fill=f'rgb{color}', stroke='black').set('stroke-width', '25')
+    circle = ET.SubElement(img, 'circle', cx='256', cy='256', r='127', fill='white', stroke='black').set('stroke-width', '25')
     return img
 
-@Memory
+
 def create_output_node(type : TYPES):
     color = COLORS.get(type)
-    img = ET.Element('svg', xmlns='http://www.w3.org/2000/svg', version='1.1', width='512', height='512')
-    circle = ET.SubElement(img, 'circle', cx='256', cy='256', r='127', fill=f'rgb{color}', stroke='black', stroke_width='5')
+    img = ET.Element('g')
+    circle = ET.SubElement(img, 'circle', cx='256', cy='256', r='127', fill=f'rgb{color}', stroke='black').set('stroke-width', '25')
     return img
 
-    
+
 if __name__ == '__main__':
     for type in TYPES:
         input_node = create_input_node(type)
