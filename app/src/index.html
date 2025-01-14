@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/dropdown.css" />
+
+    <title>Hello from Electron renderer!</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="menus">
+            <div class="dropdown">
+                <button class="dropbtn">File</button>
+                <div class="dropdown-content">
+                    <a id="openFileButton">Open File</a>
+                    <a id="newFileButton">Open File</a>
+                    <a id="saveFileButton">Save File</a>
+                    <a id="saveAsFileButton">Save As File</a>
+                    <a id="closeFileButton">Close File</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Edit</button>
+                <div class="dropdown-content">
+                    <a id="undoButton">Undo</a>
+                    <a id="redoButton">Redo</a>
+                    <a id="cutButton">Cut</a>
+                    <a id="copyButton">Copy</a>
+                    <a id="pasteButton">Paste</a>
+                    <a id="selectAllButton">Select All</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="titlebar">Stormwork Microcontroller Tool</div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
