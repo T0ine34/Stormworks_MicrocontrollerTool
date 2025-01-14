@@ -19,12 +19,21 @@ document.getElementById('saveAsFileButton').addEventListener('click', async () =
     const filePath = await window.file.save();
 });
 
-document.getElementById('closeFileButton').addEventListener('click', async () => {
+
+
+async function onClose (){
     // ask if the user wants to save the file
     if (confirm('Do you want to save the file?')) {
         const filePath = await window.file.save();
     }
 
     // clear the editor
-});
+}
+
+
+
+document.getElementById('closeFileButton').addEventListener('click', onClose);
+
+
+
 
