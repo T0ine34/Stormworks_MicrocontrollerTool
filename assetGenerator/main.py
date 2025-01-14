@@ -1,81 +1,24 @@
-from createNode import create_input_node, create_output_node, TYPES
-import xml.etree.ElementTree as ET
+from createNode import create_input_node, create_output_node
 from svgGate import AND, OR, XOR, NOT, NAND, NOR, XNOR, BUFFER
+from data import DATA
 
-DATA = {
-    "AND": {
-        "inputs": {
-            "A": TYPES.LOGIC,
-            "B": TYPES.LOGIC
-        },
-        "outputs": {
-            "A AND B": TYPES.LOGIC
-        },
-    },
-    "OR": {
-        "inputs": {
-            "A": TYPES.LOGIC,
-            "B": TYPES.LOGIC
-        },
-        "outputs": {
-            "A OR B": TYPES.LOGIC
-        },
-    },
-    "BUFFER": {
-        "inputs": {
-            "A": TYPES.LOGIC
-        },
-        "outputs": {
-            "A": TYPES.LOGIC
-        },
-    },
-    "XOR": {
-        "inputs": {
-            "A": TYPES.LOGIC,
-            "B": TYPES.LOGIC
-        },
-        "outputs": {
-            "A XOR B": TYPES.LOGIC
-        },
-    },
-    "NOT": {
-        "inputs": {
-            "A": TYPES.LOGIC
-        },
-        "outputs": {
-            "NOT A": TYPES.LOGIC
-        },
-    },
-    "NAND": {
-        "inputs": {
-            "A": TYPES.LOGIC,
-            "B": TYPES.LOGIC
-        },
-        "outputs": {
-            "A NAND B": TYPES.LOGIC
-        },
-    },
-    "NOR": {
-        "inputs": {
-            "A": TYPES.LOGIC,
-            "B": TYPES.LOGIC
-        },
-        "outputs": {
-            "A NOR B": TYPES.LOGIC
-        },
-    },
-    "XNOR": {
-        "inputs": {
-            "A": TYPES.LOGIC,
-            "B": TYPES.LOGIC
-        },
-        "outputs": {
-            "A XNOR B": TYPES.LOGIC
-        },
-    }
-}
+import os
+import xml.etree.ElementTree as ET
 
-def create_item(gate : callable):
+
+def create_item(gate : callable) -> ET.Element:
+    """Create a gate item, with inputs and outputs nodes corresponding to the gate
+    The gived gate must be in the DATA dictionnary
+
+    Args:
+        gate (callable): The gate to create (a function taking no arguments and returning a tuple (gate_img, input_coords, output_coords)). This function should create the gate svg image, and return the coordinates of the inputs and outputs nodes
+
+    Raises:
+        ValueError: If the gate is not in the DATA dictionnary
+
+    Returns:
+        xml.etree.ElementTree.Element: The gate item
+    """
     if gate.__name__ not in DATA.keys():
         raise ValueError(f'Gate {gate.__name__} not found in DATA')
     data = DATA[gate.__name__]
@@ -136,13 +79,24 @@ def create_item(gate : callable):
     return item
 
 
+def save_item(gate : callable, output_dir : str = './output'):
+    item = create_item(gate)
+    svg = ET.Element('svg', xmlns='http://www.w3.org/2000/svg', version='1.1', width='512', height='512')
+    item.set('transform', 'translate(32, 32)')
+    svg.append(item)
+    root = ET.ElementTree(svg)
+    os.makedirs(output_dir, exist_ok=True)
+    root.write(f'{output_dir}/{gate.__name__}.svg')
+    print(f'{os.path.abspath(output_dir)}/{gate.__name__}.svg created')
+
 if __name__ == '__main__':
-    import os
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Create a svg image for each gate')
+    parser.add_argument('output', type=str, help='The output directory', default='./output', nargs='?')
+    args = parser.parse_args()
+    
+    output_dir = args.output
+    
     for gate in [AND, OR, XOR, NOT, NAND, NOR, XNOR, BUFFER]:
-        item = create_item(gate)
-        os.makedirs('./output', exist_ok=True)
-        svg = ET.Element('svg', xmlns='http://www.w3.org/2000/svg', version='1.1', width='512', height='512')
-        item.set('transform', 'translate(32, 32)')
-        svg.append(item)
-        root = ET.ElementTree(svg)
-        root.write(f'./output/{gate.__name__}.svg')
+        save_item(gate, output_dir)

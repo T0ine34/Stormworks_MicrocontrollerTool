@@ -1,35 +1,7 @@
+from data import TYPES, COLORS
+
 import os
-from enum import StrEnum
-
 import xml.etree.ElementTree as ET
-
-
-# logic : red
-# number : green
-# composite : purple
-# video : light blue
-# audio : yellowish, brownish
-
-class TYPES(StrEnum):
-    LOGIC = 'logic'
-    NUMBER = 'number'
-    COMPOSITE = 'composite'
-    VIDEO = 'video'
-    AUDIO = 'audio'
-
-COLORS = {
-    TYPES.LOGIC : (255, 0, 0),
-    TYPES.NUMBER : (0, 255, 0),
-    TYPES.COMPOSITE : (129, 20, 196),
-    TYPES.VIDEO : (0, 255, 255),
-    TYPES.AUDIO : (189, 126, 43)
-}
-
-IMG_SIZE = (512, 512)
-
-OUT_CIRCLE_RADIUS = 255
-IN_CIRCLE_RADIUS = 127
-
 
 
 def create_input_node(type : TYPES):
