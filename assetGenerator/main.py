@@ -4,9 +4,10 @@ from data import DATA
 
 import os
 import xml.etree.ElementTree as ET
+from typing import Callable
 
 
-def create_item(gate : callable) -> ET.Element:
+def create_item(gate : Callable) -> ET.Element:
     """Create a gate item, with inputs and outputs nodes corresponding to the gate
     The gived gate must be in the DATA dictionnary
 
@@ -79,15 +80,24 @@ def create_item(gate : callable) -> ET.Element:
     return item
 
 
-def save_item(gate : callable, output_dir : str = './output'):
-    item = create_item(gate)
-    svg = ET.Element('svg', xmlns='http://www.w3.org/2000/svg', version='1.1', width='512', height='512')
-    item.set('transform', 'translate(32, 32)')
-    svg.append(item)
-    root = ET.ElementTree(svg)
-    os.makedirs(output_dir, exist_ok=True)
-    root.write(f'{output_dir}/{gate.__name__}.svg')
-    print(f'{os.path.abspath(output_dir)}/{gate.__name__}.svg created')
+def save_item(gate : Callable, output_dir : str = './output'):    
+    objSvg = ET.Element('svg', xmlns='http://www.w3.org/2000/svg', version='1.1', width='512', height='512')
+    iconSvg = ET.Element('svg', xmlns='http://www.w3.org/2000/svg', version='1.1', width='80', height='80')
+    
+    object = create_item(gate)
+    object.set('transform', 'translate(32, 32)')
+    objSvg.append(object)
+    
+    icon = gate()[0]
+    icon.set('transform', 'translate(0, 10)')
+    iconSvg.append(icon)
+    
+    os.makedirs(f'{output_dir}/{gate.__name__}', exist_ok=True)
+    
+    ET.ElementTree(objSvg).write(f'{output_dir}/{gate.__name__}/object.svg')
+    ET.ElementTree(iconSvg).write(f'{output_dir}/{gate.__name__}/icon.svg')
+    
+    print(f'{os.path.abspath(output_dir)}/{gate.__name__} created')
 
 if __name__ == '__main__':
     import argparse

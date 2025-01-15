@@ -1,0 +1,21 @@
+@use 'colors';
+
+.canvas-container{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    height: calc(100% - 50px);
+    background-color: colors.$blueprint-base;
+    color: colors.$font;
+    overflow: scroll;
+    cursor: default;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    #canvas{
+        transition: transform 0.2s;
+    }
+}

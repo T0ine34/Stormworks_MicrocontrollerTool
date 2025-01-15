@@ -9,5 +9,3 @@ glob.sync('src/**/*.+(html|js)').forEach(file => {
     fs.copyFileSync(file, dist);                            // copy file
     console.log(`Copied ${file} to ${dist}`);
 });
-
-console.log('Build complete!');

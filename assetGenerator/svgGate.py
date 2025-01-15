@@ -36,7 +36,7 @@ def OR():
     svg = ET.Element('g')
     
     
-    ET.SubElement(svg, 'path', d='M 12.5 10 A 5 10 0 0 1 12.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
+    ET.SubElement(svg, 'path', d='M 12.5 10 Q 30 30 12.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     ET.SubElement(svg, 'line', x1='12.5', y1='10', x2='40', y2='10', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     ET.SubElement(svg, 'line', x1='12.5', y1='50', x2='40', y2='50', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     
@@ -112,7 +112,7 @@ def NOR():
     # Create the root SVG element
     svg = ET.Element('g')
     
-    ET.SubElement(svg, 'path', d='M 12.5 10 A 5 10 0 0 1 12.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
+    ET.SubElement(svg, 'path', d='M 12.5 10 Q 30 30 12.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     ET.SubElement(svg, 'line', x1='12.5', y1='10', x2='40', y2='10', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     ET.SubElement(svg, 'line', x1='12.5', y1='50', x2='40', y2='50', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     
@@ -166,8 +166,9 @@ def XOR():
     svg = ET.Element('g')
     
     
-    ET.SubElement(svg, 'path', d='M 12.5 10 A 5 10 0 0 1 12.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
-    ET.SubElement(svg, 'path', d='M 7.5 10 A 5 10 0 0 1 7.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
+    ET.SubElement(svg, 'path', d='M 12.5 10 Q 30 30 12.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
+    ET.SubElement(svg, 'path', d='M 7.5 10 Q 25 30 7.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
+    
     ET.SubElement(svg, 'line', x1='12.5', y1='10', x2='40', y2='10', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     ET.SubElement(svg, 'line', x1='12.5', y1='50', x2='40', y2='50', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     
@@ -197,8 +198,8 @@ def XNOR():
     svg = ET.Element('g')
     
     
-    ET.SubElement(svg, 'path', d='M 12.5 10 A 5 10 0 0 1 12.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
-    ET.SubElement(svg, 'path', d='M 7.5 10 A 5 10 0 0 1 7.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
+    ET.SubElement(svg, 'path', d='M 12.5 10 Q 30 30 12.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
+    ET.SubElement(svg, 'path', d='M 7.5 10 Q 25 30 7.5 50', fill='none', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     ET.SubElement(svg, 'line', x1='12.5', y1='10', x2='40', y2='10', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     ET.SubElement(svg, 'line', x1='12.5', y1='50', x2='40', y2='50', stroke=STROKE_COLOR).set('stroke-width', STROKE_WIDTH)
     

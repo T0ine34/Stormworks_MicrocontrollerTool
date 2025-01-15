@@ -3,6 +3,8 @@ const path = require('node:path');
 
 const createWindow = () => {
     const win = new BrowserWindow({
+        backgroundColor: '#f0f0f0',
+        show: false,
         width: 800,
         height: 600,
         webPreferences: {
@@ -10,6 +12,10 @@ const createWindow = () => {
         },
         titleBarStyle: 'hidden',
         ...(process.platform !== 'darwin' ? { titleBarOverlay: true } : {}),
+    });
+
+    win.once('ready-to-show', () => {
+        win.show();
     });
 
     win.loadFile('dist/index.html');
