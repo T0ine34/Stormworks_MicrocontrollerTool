@@ -1,0 +1,991 @@
+<!-- empty mc -->
+<?xml version="1.0" encoding="UTF-8"?>
+<microprocessor name="Microcontroller" description="No description set." width="2" length="2">
+	<nodes/>
+	<group>
+		<data>
+			<inputs/>
+			<outputs/>
+		</data>
+		<components/>
+		<components_bridge/>
+		<groups/>
+		<component_states/>
+		<component_bridge_states/>
+		<group_states/>
+	</group>
+</microprocessor>
+
+
+<!-- inputs -->
+    <!-- on/off -->
+        <!-- nodes -->
+            <n id="1" component_id="1">
+                <node label="Input" mode="1" description="The input signal to be processed."/>
+            </n>
+        <!-- components_bridge -->
+            <c>
+				<object id="1"/>
+			</c>
+    <!-- number -->
+        <!-- nodes -->
+            <n id="1" component_id="2">
+                <node label="Input" mode="1" type="1" description="The input signal to be processed."/>
+            </n>
+        <!-- components_bridge -->
+            <c type="2">
+				<object id="2"/>
+			</c>
+    <!-- composite -->
+        <!-- nodes -->
+            <n id="1" component_id="3">
+                <node label="Input" mode="1" type="5" description="The input signal to be processed."/>
+            </n>
+        <!-- components_bridge -->
+            <c type="4">
+				<object id="3"/>
+			</c>
+    <!-- video -->
+        <!-- nodes -->
+            <n id="1" component_id="4">
+                <node label="Input" mode="1" type="6" description="The input signal to be processed."/>
+            </n>
+        <!-- components_bridge -->
+            <c type="6">
+                <object id="4"/>
+            </c>
+    <!-- audio -->
+        <!-- nodes -->
+            <n id="1" component_id="5">
+                <node label="Input" mode="1" type="7" description="The input signal to be processed."/>
+            </n>
+        <!-- components_bridge -->
+            <c type="8">
+                <object id="5"/>
+            </c>
+
+<!-- outputs -->
+    <!-- on/off -->
+        <!-- nodes -->
+            <n id="1" component_id="7">
+                <node label="Input" description="The input signal to be processed."/>
+            </n>
+        <!-- components_bridge -->
+            <c type="1">
+                <object id="7"/>
+            </c>
+    <!-- number -->
+        <!-- nodes -->
+            <n id="1" component_id="8">
+                <node label="Input" type="1" description="The input signal to be processed."/>
+            </n>
+        <!-- components_bridge -->
+            <c type="3">
+                <object id="8"/>
+            </c>
+    <!-- composite -->
+        <!-- nodes -->
+            <n id="1" component_id="9">
+                <node label="Input" type="5" description="The input signal to be processed."/>
+            </n>
+        <!-- components_bridge -->
+            <c type="5">
+                <object id="9"/>
+            </c>
+    <!-- video -->
+        <!-- nodes -->
+            <n id="1" component_id="10">
+                <node label="Input" type="6" description="The input signal to be processed."/>
+            </n>
+        <!-- components_bridge -->
+            <c type="7">
+                <object id="10"/>
+            </c>
+    <!-- audio -->
+        <!-- nodes -->
+            <n id="1" component_id="11">
+                <node label="Input" type="7" description="The input signal to be processed."/>
+            </n>
+        <!-- components_bridge -->
+            <c type="9">
+                <object id="11"/>
+            </c>
+
+<!-- components -->
+    <!-- not -->
+        <!-- components -->
+            <c>
+				<object id="26">
+					<pos x="-1"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="26">
+                <pos x="-1"/>
+            </c0>
+    <!-- and -->
+        <!-- components -->
+            <c type="1">
+                <object id="27">
+                    <pos x="-1.5" y="0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="27">
+                <pos x="-1.5" y="0.25"/>
+            </c0>
+    <!-- or -->
+        <!-- components -->
+            <c type="2">
+                <object id="28">
+                    <pos x="-0.75" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="28">
+                <pos x="-0.75" y="-0.25"/>
+            </c0>
+    <!-- xor -->
+        <!-- components -->
+            <c type="3">
+                <object id="29">
+                    <pos x="-0.75" y="0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="29">
+                <pos x="-0.75" y="0.25"/>
+            </c0>
+    <!-- nand -->
+        <!-- components -->
+            <c type="4">
+                <object id="30">
+                    <pos x="-1.5" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="30">
+                <pos x="-1.5" y="-0.25"/>
+            </c0>
+    <!-- nor -->
+        <!-- components -->
+            <c type="5">
+                <object id="31">
+                    <pos x="-0.5" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="31">
+                <pos x="-0.5" y="-0.25"/>
+            </c0>
+    <!-- add -->
+        <!-- components -->
+            <c type="6">
+                <object id="32">
+                    <pos x="-0.5" y="0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="32">
+                <pos x="-0.5" y="0.25"/>
+            </c0>
+    <!-- subtract -->
+        <!-- components -->
+            <c type="7">
+                <object id="33">
+                    <pos x="-1" y="0.5"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="33">
+                <pos x="-1" y="0.5"/>
+            </c0>
+    <!-- multiply -->
+        <!-- components -->
+            <c type="8">
+                <object id="34">
+                    <pos x="-0.25" y="0.5"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="34">
+                <pos x="-0.25" y="0.5"/>
+            </c0>
+    <!-- divide -->
+        <!-- components -->
+            <c type="9">
+                <object id="35">
+                    <pos x="-0.25" y="0.5"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="35">
+                <pos x="-0.25" y="0.5"/>
+            </c0>
+    <!-- f(x, y, z) -->
+        <!-- components -->
+            <c type="10">
+				<object id="38" e="x+y+z" p1="340282346638528859811704183484516925440" p2="340282346638528859811704183484516925440" p3="340282346638528859811704183484516925440">
+					<pos x="-0.75" y="0.25"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="38" e="x+y+z" p1="340282346638528859811704183484516925440" p2="340282346638528859811704183484516925440" p3="340282346638528859811704183484516925440">
+				<pos x="-0.75" y="0.25"/>
+			</c0>
+    <!-- clamp -->
+        <!-- components -->
+            <c type="11">
+                <object id="39">
+                    <pos x="-1.75"/>
+                    <min text="0"/>
+                    <max text="1" value="1"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="39">
+                <pos x="-1.75"/>
+                <min text="0"/>
+                <max text="1" value="1"/>
+            </c0>
+    <!-- threshold -->
+        <!-- components -->
+            <c type="12">
+                <object id="41">
+                    <pos x="-1.75" y="-0.25"/>
+                    <min text="0"/>
+                    <max text="1" value="1"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="41">
+                <pos x="-1.75" y="-0.25"/>
+                <min text="0"/>
+                <max text="1" value="1"/>
+            </c0>
+    <!-- memory register -->
+        <!-- components -->
+            <c type="13">
+                <object id="42">
+                    <pos x="-2" y="-0.25"/>
+                    <r text="0"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="42">
+                <pos x="-2" y="-0.25"/>
+                <r text="0"/>
+            </c0>
+    <!-- abs -->
+        <!-- components -->
+            <c type="14">
+                <object id="43">
+                    <pos x="-2"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="43">
+                <pos x="-2"/>
+            </c0>
+    <!-- constant number -->
+        <!-- components -->
+            <c type="15">
+                <object id="44">
+                    <pos x="-2" y="0.25"/>
+                    <n text="0"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="44">
+                <pos x="-2" y="0.25"/>
+                <n text="0"/>
+            </c0>
+    <!-- constant on signal -->
+        <!-- components -->
+            <c type="16">
+                <object id="45">
+                    <pos x="-1.5" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="45">
+                <pos x="-1.5" y="-0.25"/>
+            </c0>
+    <!-- greater than -->
+        <!-- components -->
+            <c type="17">
+                <object id="46">
+                    <pos x="-1.75" y="0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="46">
+                <pos x="-1.75" y="0.25"/>
+            </c0>
+    <!-- less than -->
+        <!-- components -->
+            <c type="18">
+                <object id="47">
+                    <pos x="-1.75" y="0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="47">
+                <pos x="-1.75" y="0.25"/>
+            </c0>
+    <!-- property slider -->
+        <!-- components -->
+            <c type="19">
+                <object id="48">
+                    <pos x="-1.25" y="-1.5"/>
+                    <min text="0"/>
+                    <max text="10" value="10"/>
+                    <int text="1" value="1"/>
+                    <v text="0"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="48">
+                <pos x="-1.25" y="-1.5"/>
+                <min text="0"/>
+                <max text="10" value="10"/>
+                <int text="1" value="1"/>
+                <v text="0"/>
+            </c0>
+    <!-- property dropdown -->
+        <!-- components -->
+            <c type="20">
+				<object id="50">
+					<pos x="-1.5" y="-0.75"/>
+					<items>
+						<i l="option 1">
+							<v text="0"/>
+						</i>
+						<i l="option 2">
+							<v text="0"/>
+						</i>
+					</items>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="50">
+				<pos x="-1.5" y="-0.75"/>
+				<items>
+					<i l="option 1">
+						<v text="0"/>
+					</i>
+					<i l="option 2">
+						<v text="0"/>
+					</i>
+				</items>
+			</c0>
+    <!-- numerical junction -->
+        <!-- components -->
+            <c type="21">
+                <object id="51">
+                    <pos x="-1.5" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="51">
+                <pos x="-1.5" y="-0.25"/>
+            </c0>
+    <!-- numerical switchbox -->
+        <!-- components -->
+            <c type="22">
+                <object id="52">
+                    <pos x="-2.5" y="0.75"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="52">
+                <pos x="-2.5" y="0.75"/>
+            </c0>
+    <!-- PID controller -->
+        <!-- components -->
+            <c type="23">
+                <object id="53">
+                    <pos x="-0.75" y="-0.25"/>
+                    <kp text="1" value="1"/> <!-- Proportional gain -->
+					<ki text="2" value="2"/> <!-- Integral gain -->
+					<kd text="3" value="3"/> <!-- Derivative gain -->
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="53">
+                <pos x="-0.75" y="-0.25"/>
+                <kp text="1" value="1"/> 
+                <ki text="2" value="2"/>
+                <kd text="3" value="3"/>
+            </c0>
+    <!-- SR latch -->
+        <!-- components -->
+            <c type="24">
+                <object id="55">
+                    <pos x="-1.5" y="-0.5"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="55">
+                <pos x="-1.5" y="-0.5"/>
+            </c0>
+    <!-- JK flip-flop -->
+        <!-- components -->
+            <c type="25">
+                <object id="56">
+                    <pos x="-1" y="-0.5"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="56">
+                <pos x="-1" y="-0.5"/>
+            </c0>
+    <!-- capacitor -->
+        <!-- components -->
+            <c type="26">
+                <object id="57">
+                    <pos x="-1.5" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="57">
+                <pos x="-1.5" y="-0.25"/>
+            </c0>
+    <!-- blinker -->
+        <!-- components -->
+            <c type="27">
+				<object id="58" on="0.5" off="1.5">
+					<pos x="-1" y="-0.75"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="58" on="0.5" off="1.5">
+				<pos x="-1" y="-0.75"/>
+			</c0>
+    <!-- push to toggle -->
+        <!-- components -->
+            <c type="28">
+                <object id="59">
+                    <pos x="-0.75" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="59">
+                <pos x="-0.75" y="-0.25"/>
+            </c0>
+    <!-- composite read(on/off) -->
+        <!-- components -->
+            <c type="29">
+				<object id="61" i="-1"> <!-- i is the channel number; -1 mean from node -->
+					<pos x="-1.75" y="-1"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="61" i="-1">
+				<pos x="-1.75" y="-1"/>
+			</c0>
+    <!-- composite read(number) -->
+        <!-- components -->
+            <c type="31">
+                <object id="62" i="-1"> <!-- i is the channel number; -1 mean from node -->
+                    <pos x="-1.75" y="-1"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="62" i="-1">
+                <pos x="-1.75" y="-1"/>
+            </c0>
+    <!-- property toggle -->
+        <!-- components -->
+            <c type="33">
+				<object id="63" n="this is the name" on="on_label" off="off_label" v="true"> <!-- if v is not set, it is false -->
+					<pos x="-1" y="-0.75"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="63" n="this is the name" on="on_label" off="off_label" v="true">
+				<pos x="-1" y="-0.75"/>
+			</c0>
+    <!-- property number -->
+        <!-- components -->
+            <c type="34">
+                <object id="64" n="this is the name">
+                    <pos x="-1.25"/>
+                    <v text="1" value="1"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="64" n="this is the name">
+                <pos x="-1.25"/>
+                <v text="1" value="1"/>
+            </c0>
+    <!-- delta -->
+        <!-- components -->
+            <c type="35">
+                <object id="66">
+                    <pos x="-1.5" y="0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="66">
+                <pos x="-1.5" y="0.25"/>
+            </c0>
+    <!-- f(x, y, z, w, a, b, c, d) -->
+        <!-- components -->
+            <c type="36">
+				<object id="67" e="x+y+z">
+					<pos x="-0.5" y="-0.75"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="67" e="x+y+z">
+                <pos x="-0.5" y="-0.75"/>
+            </c0>
+    <!-- Up/Down counter -->
+        <!-- components -->
+            <c type="37">
+                <object id="68" m="1">
+                    <pos x="-0.75" y="-0.25"/>
+                    <r text="3" value="3"/>
+                    <i text="2" value="2"/>
+                    <min text="-1" value="-1"/>
+                    <max text="1" value="1"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="68" m="1">
+                <pos x="-0.75" y="-0.25"/>
+                <r text="3" value="3"/>
+                <i text="2" value="2"/>
+                <min text="-1" value="-1"/>
+                <max text="1" value="1"/>
+            </c0>
+    <!-- Modulo (fmod) -->
+        <!-- components -->
+            <c type="38">
+                <object id="69">
+                    <pos x="-0.5" y="0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="69">
+                <pos x="-0.5" y="0.25"/>
+            </c0>
+    <!-- PID controller (Advanced) -->
+        <!-- components -->
+            <c type="39">
+				<object id="70">
+					<pos x="-1" y="-0.75"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="70">
+                <pos x="-1" y="-0.75"/>
+            </c0>
+    <!-- composite write(number) -->
+        <!-- components -->
+            <c type="40">
+				<object id="72" count="5" offset="3"> <!-- count is the number of channels; offset is the starting channel -->
+					<pos x="-1.25" y="0.75"/>
+					<in1/> <!-- in1 to in5 are the channels -->
+					<in2/>
+					<in3/>
+					<in4/>
+					<in5/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="72" count="5" offset="3">
+                <pos x="-1.25" y="0.75"/>
+                <in1/>
+                <in2/>
+                <in3/>
+                <in4/>
+                <in5/>
+            </c0>
+    <!-- composite write(on/off) -->
+        <!-- components -->
+            <c type="41">
+				<object id="73" count="2" offset="3">
+					<pos x="-1"/>
+					<in1/>
+					<in2/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="73" count="2" offset="3">
+                <pos x="-1"/>
+                <in1/>
+                <in2/>
+            </c0>
+    <!-- equal -->
+        <!-- components -->
+            <c type="42">
+				<object id="74">
+					<pos x="-1.25" y="-0.75"/>
+					<e text="0.1" value="0.1"/> <!-- epsilon -->
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="74">
+                <pos x="-1.25" y="-0.75"/>
+                <e text="0.1" value="0.1"/>
+            </c0>
+    <!-- tooltip number -->
+        <!-- components -->
+            <c type="43">
+                <object id="75" l="property name" m="2"> <!-- l is the label; m is the mode (0 for "always", 1 for "if error", 2 for "if no error") -->
+                    <pos x="-0.75" y="-0.75"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="75" l="property name" m="2">
+                <pos x="-0.75" y="-0.75"/>
+            </c0>
+    <!-- tooltip on/off -->
+        <!-- components -->
+            <c type="44">
+				<object id="76" l="property name" on="on label" off="off label" m="1"> <!-- l is the label; on is the on label; off is the off label; m is the mode (0 for "always", 1 for "if error", 2 for "if no error") -->
+					<pos x="-0.25" y="-0.5"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="76" l="property name" on="on label" off="off label" m="1">
+                <pos x="-0.25" y="-0.5"/>
+            </c0>
+    <!-- f(x) -->
+        <!-- components -->
+            <c type="45">
+                <object id="77" e="x-5">
+                    <pos x="-0.5" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="77" e="x-5">
+                <pos x="-0.5" y="-0.25"/>
+            </c0>
+    <!-- Boolean f(x, y, z, w)-->
+        <!-- components -->
+            <c type="46">
+                <object id="78" e="x|y|z">
+                    <pos x="-0.5" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="78" e="x|y|z">
+                <pos x="-0.5" y="-0.25"/>
+            </c0>
+    <!-- Boolean f(x, y, z, w, a, b, c, d)-->
+        <!-- components -->
+            <c type="47">
+                <object id="79" e="x|y|z">
+                    <pos x="-0.5" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="79" e="x|y|z">
+                <pos x="-0.5" y="-0.25"/>
+            </c0>
+    <!-- Pulse (toggle to push) -->
+        <!-- components -->
+            <c type="48">
+				<object id="80" m="2"> <!-- m is the mode (0 for "Off -> On", 1 for "On -> Off", 2 for Always) -->
+					<pos x="-0.25" y="-0.25"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="80" m="2">
+                <pos x="-0.25" y="-0.25"/>
+            </c0>
+    <!-- Timer (TON) -->
+        <!-- components -->
+            <c type="49">
+				<object id="82" u="1"> <!-- u is the unit (0 for second, 1 for tick) -->
+					<pos x="-0.25" y="-0.5"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="82" u="1">
+                <pos x="-0.25" y="-0.5"/>
+            </c0>
+    <!-- Timer (TOF) -->
+        <!-- components -->
+            <c type="50">
+                <object id="83" u="1"> <!-- u is the unit (0 for second, 1 for tick) -->
+                    <pos x="-0.25" y="-0.5"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="83" u="1">
+                <pos x="-0.25" y="-0.5"/>
+            </c0>
+    <!-- Timer (RTO) -->
+        <!-- components -->
+            <c type="51">
+                <object id="84" u="1"> <!-- u is the unit (0 for second, 1 for tick) -->
+                    <pos x="-0.25" y="-0.5"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="84" u="1">
+                <pos x="-0.25" y="-0.5"/>
+            </c0>
+    <!-- Timer (RTF) -->
+        <!-- components -->
+            <c type="52">
+                <object id="85" u="1"> <!-- u is the unit (0 for second, 1 for tick) -->
+                    <pos x="-0.25" y="-0.5"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="85" u="1">
+                <pos x="-0.25" y="-0.5"/>
+            </c0>
+    <!-- Composite switchbox -->
+        <!-- components -->
+            <c type="53">
+                <object id="86" count="2" offset="1"> <!-- count is the number of channels; offset is the starting channel -->
+                    <pos x="-1.25" y="0.75"/>
+                    <in1/>
+                    <in2/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="86" count="2" offset="1">
+                <pos x="-1.25" y="0.75"/>
+                <in1/>
+                <in2/>
+            </c0>
+    <!-- Number to composite binary -->
+        <!-- components -->
+            <c type="54">
+				<object id="88">
+					<pos x="-0.5" y="-0.5"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="88">
+                <pos x="-0.5" y="-0.5"/>
+            </c0>
+    <!-- Composite binary to number -->
+        <!-- components -->
+            <c type="55">
+                <object id="89">
+                    <pos x="-0.5" y="-0.5"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="89">
+                <pos x="-0.5" y="-0.5"/>
+            </c0>
+    <!-- Lua script -->
+        <!-- components -->
+            <c type="56">
+                <object id="90" script="-- Tick function that will be executed every logic tick
+function onTick()
+	value = input.getNumber(1)			 -- Read the first number from the script's composite input
+	output.setNumber(1, value * 10)		-- Write a number to the script's composite output
+end
+
+-- Draw function that will be executed when this script renders to a screen
+function onDraw()
+	w = screen.getWidth()				  -- Get the screen's width and height
+	h = screen.getHeight()					
+	screen.setColor(0, 255, 0)			 -- Set draw color to green
+	screen.drawCircleF(w / 2, h / 2, 30)   -- Draw a 30px radius circle in the center of the screen
+end">
+                    <pos x="-0.25" y="-0.25"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="90" script="-- Tick function that will be executed every logic tick
+function onTick()
+	value = input.getNumber(1)			 -- Read the first number from the script's composite input
+	output.setNumber(1, value * 10)		-- Write a number to the script's composite output
+end
+
+-- Draw function that will be executed when this script renders to a screen
+function onDraw()
+	w = screen.getWidth()				  -- Get the screen's width and height
+	h = screen.getHeight()					
+	screen.setColor(0, 255, 0)			 -- Set draw color to green
+	screen.drawCircleF(w / 2, h / 2, 30)   -- Draw a 30px radius circle in the center of the screen
+end">
+                <pos x="-0.25" y="-0.25"/>
+            </c0>
+    <!-- Video switchbox -->
+        <!-- components -->
+            <c type="57">
+				<object id="92">
+					<pos x="-1"/>
+				</object>
+			</c>
+        <!-- component_states -->
+            <c0 id="92">
+                <pos x="-1"/>
+            </c0>
+    <!-- Property text -->
+        <!-- components -->
+            <c type="58">
+                <object id="93" n="Label" v="toto">
+                    <pos x="-0.75"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="93" n="Label" v="toto">
+                <pos x="-0.75"/>
+            </c0>
+    <!-- Audio switchbox -->
+        <!-- components -->
+            <c type="59">
+                <object id="94">
+                    <pos x="-1"/>
+                </object>
+            </c>
+        <!-- component_states -->
+            <c0 id="94">
+                <pos x="-1"/>
+            </c0>
+
+<!-- link between elements -->
+<!-- we have 1 on/off input, linked on both inputs of a and gate -->
+<?xml version="1.0" encoding="UTF-8"?>
+<microprocessor name="Microcontroller" description="No description set." width="2" length="2" id_counter="96" id_counter_node="2">
+	<nodes>
+		<n id="2" component_id="95">
+			<node label="Input" mode="1" description="The input signal to be processed."/>
+		</n>
+	</nodes>
+	<group>
+		<data>
+			<inputs/>
+			<outputs/>
+		</data>
+		<components>
+			<c type="1">
+				<object id="96">
+					<pos x="2" y="-0.25"/>
+					<in1 component_id="95"/>
+					<in2 component_id="95"/>
+				</object>
+			</c>
+		</components>
+		<components_bridge>
+			<c>
+				<object id="95"/>
+			</c>
+		</components_bridge>
+		<groups/>
+		<component_states>
+			<c0 id="96">
+				<pos x="2" y="-0.25"/>
+				<in1 component_id="95"/>
+			</c0>
+		</component_states>
+		<component_bridge_states>
+			<c0 id="95"/>
+		</component_bridge_states>
+		<group_states/>
+	</group>
+</microprocessor>
+
+<!-- we have 1 number input, linked on the first input of a add component -->
+<?xml version="1.0" encoding="UTF-8"?>
+<microprocessor name="Microcontroller" description="No description set." width="2" length="2" id_counter="98" id_counter_node="2">
+	<nodes>
+		<n id="2" component_id="97">
+			<node label="Input" mode="1" type="1" description="The input signal to be processed."/>
+		</n>
+	</nodes>
+	<group>
+		<data>
+			<inputs/>
+			<outputs/>
+		</data>
+		<components>
+			<c type="6">
+				<object id="98">
+					<pos x="1.75" y="-0.25"/>
+					<in1 component_id="97"/>
+				</object>
+			</c>
+		</components>
+		<components_bridge>
+			<c type="2">
+				<object id="97"/>
+			</c>
+		</components_bridge>
+		<groups/>
+		<component_states>
+			<c0 id="98">
+				<pos x="1.75" y="-0.25"/>
+				<in1 component_id="97"/>
+			</c0>
+		</component_states>
+		<component_bridge_states>
+			<c0 id="97"/>
+		</component_bridge_states>
+		<group_states/>
+	</group>
+</microprocessor>
+
+
+<!-- we have 1 number switchbox, with each output linked to a number output node -->
+<?xml version="1.0" encoding="UTF-8"?>
+<microprocessor name="Microcontroller" description="No description set." width="2" length="2" id_counter="106" id_counter_node="3">
+	<nodes>
+		<n id="2" component_id="105">
+			<node label="Input" type="1" description="The input signal to be processed."/>
+		</n>
+		<n id="3" component_id="106">
+			<node label="Input" type="1" description="The input signal to be processed.">
+				<position z="1"/>
+			</node>
+		</n>
+	</nodes>
+	<group>
+		<data>
+			<inputs/>
+			<outputs/>
+		</data>
+		<components>
+			<c type="21">
+				<object id="104">
+					<pos y="-0.75"/>
+				</object>
+			</c>
+		</components>
+		<components_bridge>
+			<c type="3">
+				<object id="105">
+					<pos x="2" y="-0.75"/>
+					<in1 component_id="104" node_index="1"/>
+				</object>
+			</c>
+			<c type="3">
+				<object id="106">
+					<pos x="2" y="-0.25"/>
+					<in1 component_id="104"/>
+				</object>
+			</c>
+		</components_bridge>
+		<groups/>
+		<component_states>
+			<c0 id="104">
+				<pos y="-0.75"/>
+			</c0>
+		</component_states>
+		<component_bridge_states>
+			<c0 id="105">
+				<pos x="2" y="-0.75"/>
+				<in1 component_id="104" node_index="1"/>
+			</c0>
+			<c1 id="106">
+				<pos x="2" y="-0.25"/>
+				<in1 component_id="104"/>
+			</c1>
+		</component_bridge_states>
+		<group_states/>
+	</group>
+</microprocessor>
+

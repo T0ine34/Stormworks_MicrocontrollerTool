@@ -1,0 +1,417 @@
+{
+  "elements": [
+    {
+      "name": "not",
+      "id": 26,
+      "category": "Logical"
+    },
+    {
+      "name": "and",
+      "id": 27,
+      "category": "Logical"
+    },
+    {
+      "name": "or",
+      "id": 28,
+      "category": "Logical"
+    },
+    {
+      "name": "xor",
+      "id": 29,
+      "category": "Logical"
+    },
+    {
+      "name": "nand",
+      "id": 30,
+      "category": "Logical"
+    },
+    {
+      "name": "nor",
+      "id": 31,
+      "category": "Logical"
+    },
+    {
+      "name": "add",
+      "id": 32,
+      "category": "Arithmetic"
+    },
+    {
+      "name": "subtract",
+      "id": 33,
+      "category": "Arithmetic"
+    },
+    {
+      "name": "multiply",
+      "id": 34,
+      "category": "Arithmetic"
+    },
+    {
+      "name": "divide",
+      "id": 35,
+      "category": "Arithmetic"
+    },
+    {
+      "name": "f(x, y, z)",
+      "id": 38,
+      "category": "Arithmetic",
+      "specials": {
+        "e": "x+y+z",
+        "p1": "340282346638528859811704183484516925440",
+        "p2": "340282346638528859811704183484516925440",
+        "p3": "340282346638528859811704183484516925440"
+      }
+    },
+    {
+      "name": "clamp",
+      "id": 39,
+      "category": "Arithmetic",
+      "specials": {
+        "min": "0",
+        "max": "1"
+      }
+    },
+    {
+      "name": "threshold",
+      "id": 41,
+      "category": "Control",
+      "specials": {
+        "min": "0",
+        "max": "1"
+      }
+    },
+    {
+      "name": "memory register",
+      "id": 42,
+      "category": "Control",
+      "specials": {
+        "r": "0"
+      }
+    },
+    {
+      "name": "abs",
+      "id": 43,
+      "category": "Arithmetic"
+    },
+    {
+      "name": "constant number",
+      "id": 44,
+      "category": "Arithmetic",
+      "specials": {
+        "n": "0"
+      }
+    },
+    {
+      "name": "constant on signal",
+      "id": 45,
+      "category": "Logical"
+    },
+    {
+      "name": "greater than",
+      "id": 46,
+      "category": "Control"
+    },
+    {
+      "name": "less than",
+      "id": 47,
+      "category": "Control"
+    },
+    {
+      "name": "property slider",
+      "id": 48,
+      "category": "Property",
+      "specials": {
+        "min": "0",
+        "max": "10",
+        "int": "1",
+        "v": "0"
+      }
+    },
+    {
+      "name": "property dropdown",
+      "id": 50,
+      "category": "Property",
+      "specials": {
+        "items": [
+          { "l": "option 1", "v": "0" },
+          { "l": "option 2", "v": "0" }
+        ]
+      }
+    },
+    {
+      "name": "numerical junction",
+      "id": 51,
+      "category": "Control"
+    },
+    {
+      "name": "numerical switchbox",
+      "id": 52,
+      "category": "Control"
+    },
+    {
+      "name": "PID controller",
+      "id": 53,
+      "category": "Control",
+      "specials": {
+        "kp": "1",
+        "ki": "2",
+        "kd": "3"
+      }
+    },
+    {
+      "name": "SR latch",
+      "id": 55,
+      "category": "Logical"
+    },
+    {
+      "name": "JK flip-flop",
+      "id": 56,
+      "category": "Logical"
+    },
+    {
+      "name": "capacitor",
+      "id": 57,
+      "category": "Control"
+    },
+    {
+      "name": "blinker",
+      "id": 58,
+      "category": "Control",
+      "specials": {
+        "on": "0.5",
+        "off": "1.5"
+      }
+    },
+    {
+      "name": "push to toggle",
+      "id": 59,
+      "category": "Logical"
+    },
+    {
+      "name": "composite read(on/off)",
+      "id": 61,
+      "category": "Composite",
+      "specials": {
+        "i": "-1"
+      }
+    },
+    {
+      "name": "composite read(number)",
+      "id": 62,
+      "category": "Composite",
+      "specials": {
+        "i": "-1"
+      }
+    },
+    {
+      "name": "property toggle",
+      "id": 63,
+      "category": "Property",
+      "specials": {
+        "n": "this is the name",
+        "on": "on_label",
+        "off": "off_label",
+        "v": "true"
+      }
+    },
+    {
+      "name": "property number",
+      "id": 64,
+      "category": "Property",
+      "specials": {
+        "n": "this is the name",
+        "v": "1"
+      }
+    },
+    {
+      "name": "delta",
+      "id": 66,
+      "category": "Arithmetic"
+    },
+    {
+      "name": "f(x, y, z, w, a, b, c, d)",
+      "id": 67,
+      "category": "Arithmetic",
+      "specials": {
+        "e": "x+y+z"
+      }
+    },
+    {
+      "name": "Up/Down counter",
+      "id": 68,
+      "category": "Control",
+      "specials": {
+        "m": "1",
+        "r": "3",
+        "i": "2",
+        "min": "-1",
+        "max": "1"
+      }
+    },
+    {
+      "name": "Modulo (fmod)",
+      "id": 69,
+      "category": "Arithmetic"
+    },
+    {
+      "name": "PID controller (Advanced)",
+      "id": 70,
+      "category": "Control"
+    },
+    {
+      "name": "composite write(number)",
+      "id": 72,
+      "category": "Composite",
+      "specials": {
+        "count": "5",
+        "offset": "3"
+      }
+    },
+    {
+      "name": "composite write(on/off)",
+      "id": 73,
+      "category": "Composite",
+      "specials": {
+        "count": "2",
+        "offset": "3"
+      }
+    },
+    {
+      "name": "equal",
+      "id": 74,
+      "category": "Arithmetic",
+      "specials": {
+        "e": "0.1"
+      }
+    },
+    {
+      "name": "tooltip number",
+      "id": 75,
+      "category": "Property",
+      "specials": {
+        "l": "property name",
+        "m": "2"
+      }
+    },
+    {
+      "name": "tooltip on/off",
+      "id": 76,
+      "category": "Property",
+      "specials": {
+        "l": "property name",
+        "on": "on label",
+        "off": "off label",
+        "m": "1"
+      }
+    },
+    {
+      "name": "f(x)",
+      "id": 77,
+      "category": "Arithmetic",
+      "specials": {
+        "e": "x-5"
+      }
+    },
+    {
+      "name": "Boolean f(x, y, z, w)",
+      "id": 78,
+      "category": "Logical",
+      "specials": {
+        "e": "x|y|z"
+      }
+    },
+    {
+      "name": "Boolean f(x, y, z, w, a, b, c, d)",
+      "id": 79,
+      "category": "Logical",
+      "specials": {
+        "e": "x|y|z"
+      }
+    },
+    {
+      "name": "Pulse (toggle to push)",
+      "id": 80,
+      "category": "Logical",
+      "specials": {
+        "m": "2"
+      }
+    },
+    {
+      "name": "Timer (TON)",
+      "id": 82,
+      "category": "Control",
+      "specials": {
+        "u": "1"
+      }
+    },
+    {
+      "name": "Timer (TOF)",
+      "id": 83,
+      "category": "Control",
+      "specials": {
+        "u": "1"
+      }
+    },
+    {
+      "name": "Timer (RTO)",
+      "id": 84,
+      "category": "Control",
+      "specials": {
+        "u": "1"
+      }
+    },
+    {
+      "name": "Timer (RTF)",
+      "id": 85,
+      "category": "Control",
+      "specials": {
+        "u": "1"
+      }
+    },
+    {
+      "name": "Composite switchbox",
+      "id": 86,
+      "category": "Composite",
+      "specials": {
+        "count": "2",
+        "offset": "1"
+      }
+    },
+    {
+      "name": "Number to composite binary",
+      "id": 88,
+      "category": "Composite"
+    },
+    {
+      "name": "Composite binary to number",
+      "id": 89,
+      "category": "Composite"
+    },
+    {
+      "name": "Lua script",
+      "id": 90,
+      "category": "Composite",
+      "specials": {
+        "script": "-- Tick function that will be executed every logic tick\nfunction onTick()\n\tvalue = input.getNumber(1)\t\t\t -- Read the first number from the script's composite input\n\toutput.setNumber(1, value * 10)\t\t-- Write a number to the script's composite output\nend\n\n-- Draw function that will be executed when this script renders to a screen\nfunction onDraw()\n\tw = screen.getWidth()\t\t\t  -- Get the screen's width and height\n\th = screen.getHeight()\t\t\t\t\n\tscreen.setColor(0, 255, 0)\t\t -- Set draw color to green\n\tscreen.drawCircleF(w / 2, h / 2, 30)   -- Draw a 30px radius circle in the center of the screen\nend"
+      }
+    },
+    {
+      "name": "Video switchbox",
+      "id": 92,
+      "category": "Composite"
+    },
+    {
+      "name": "Property text",
+      "id": 93,
+      "category": "Property",
+      "specials": {
+        "n": "Label",
+        "v": "toto"
+      }
+    },
+    {
+      "name": "Audio switchbox",
+      "id": 94,
+      "category": "Composite"
+    }
+  ]
+}
